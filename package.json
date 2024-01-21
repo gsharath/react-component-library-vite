@@ -31,7 +31,8 @@
       "import": {
         "default": "./dist/utility.js"
       }
-    }
+    },
+    "./customstyles.css": "./dist/customstyles.css"
   },
   "dependencies": {
     "prop-types": "^15.8.1"

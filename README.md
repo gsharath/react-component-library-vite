@@ -21,11 +21,22 @@ Once you have published the repo to npm, Install react-component-library-vite wi
 
 ## Usage/Examples
 
+Example 1:
+
 ```javascript
 import { Button} from 'react-component-library-vite/components';
 
 <Button>Primary</Button>
 ```
+
+Example 2: Assume we are having common styles which should be applied to any application that uses this library, we can export a css and use that in our project as below. 
+I have a customstyles.css file in my library, which I am importing in my project as: 
+
+```javascript
+import 'react-component-library-vite/customstyles.css'
+```
+
+
 ## Test cases
 
 You can run test cases with the below command
