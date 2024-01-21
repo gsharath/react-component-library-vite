@@ -1,14 +1,16 @@
 {
   "name": "react-component-library-vite",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.13",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "publish:lib": "npm run build && npm publish"
+    "publish:lib": "npm run build && npm publish",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest run"
   },
   "main": "./index.js",
   "module": "./index.mjs",
@@ -35,6 +37,15 @@
     "prop-types": "^15.8.1"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-vite": "^7.6.10",
+    "@storybook/test": "^7.6.10",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
@@ -42,14 +53,18 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.8",
+    "eslint-plugin-storybook": "^0.6.15",
+    "jsdom": "^23.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.10",
+    "vite": "^5.0.8",
+    "vitest": "^1.2.1"
   },
   "peerDependencies": {
     "styled-components": "^6.1.8"
   },
-  "files":[
+  "files": [
     "/dist"
   ]
 }

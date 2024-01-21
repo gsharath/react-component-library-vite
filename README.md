@@ -26,5 +26,19 @@ import { Button} from 'react-component-library-vite/components';
 
 <Button>Primary</Button>
 ```
+## Test cases
 
+You can run test cases with the below command
+
+```bash
+  npm run test
+```
+
+## Storybook
+
+Basic storybook setup is also present and it can be run using below command
+
+```bash
+  npm run storybook
+```
 

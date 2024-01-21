@@ -32,4 +32,9 @@ export default defineConfig({
     emptyOutDir: true,
   },
   plugins: [react()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './tests/setup.js',
+  },
 })
