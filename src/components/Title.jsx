@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Title = (props)=>{
+const Title = (props)=>{
     const {children} = props;
     return (
         <>
@@ -9,10 +10,11 @@ export const Title = (props)=>{
     )
 }
 
-Button.defaultProps = {
+Title.defaultProps = {
     children: ''
   }
   
-  Button.propTypes = {
+Title.propTypes = {
     children: PropTypes.any
-  }
+}
+export {Title};

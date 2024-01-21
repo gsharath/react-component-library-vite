@@ -17,7 +17,7 @@ const ButtonStyled = styled.button`
   background: ${props => handleVariant(props.$variant)};
   color: white;
 `
-export const Button = (props) => {
+const Button = (props) => {
   const {children, variant} = props;
     return (
         <ButtonStyled $variant={variant}>{children}</ButtonStyled>
@@ -32,3 +32,4 @@ Button.propTypes = {
   variant:  PropTypes.oneOf(['primary', 'secondary', 'teritiary']),
   children: PropTypes.any
 }
+export {Button};

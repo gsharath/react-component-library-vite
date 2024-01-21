@@ -7,7 +7,29 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish:lib": "npm run build && npm publish"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./components": {
+      "require": {
+        "default": "./dist/components.cjs"
+      },
+      "import": {
+        "default": "./dist/components.js"
+      }
+    },
+    "./utility": {
+      "require": {
+        "default": "./dist/utility.cjs"
+      },
+      "import": {
+        "default": "./dist/utility.js"
+      }
+    }
   },
   "dependencies": {
     "prop-types": "^15.8.1"
@@ -26,5 +48,8 @@
   },
   "peerDependencies": {
     "styled-components": "^6.1.8"
-  }
+  },
+  "files":[
+    "/dist"
+  ]
 }
